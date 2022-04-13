@@ -1,0 +1,36 @@
+Kucoin Trading Assistance Tools:
+
+-- Place trades with special properties in Kucoin:
+Inputs:
+1. Symbol
+2. Side
+3. Account size
+4. Percent risk
+5. Entry price
+6. Stop Loss price
+7. Display position size and number of contracts to purchase
+8. Take Profits (in loop)
+	a. What price?
+	b. What percentage of position? (check if there is that much position left)
+	*c. Move SL to entry after this TP?
+	d. Another TP?
+----- use reduce only for take profits and stop losses -----
+
+
+
+
+Iplement TP/SL with stop orders:
+Stop Type: "up" for shorts, "down" for longs
+Entry: limit order at price
+SL: stop limit order
+	xxxxx - stop order at entry limit price xxxxx
+	- stop market order at SL price
+	- limit reduce only order to reduce full position at SL price
+TPn: stop limit orders
+	- stop order at entry limit price
+	- limit reduce only order to reduce desired amount of position at TPn price
+	*- if moving SL after TP
+		-- this might need to be done with an alert or something triggered 2nd order (after two prices have been hit in a particular sequence)
+
+
+
